@@ -1,4 +1,4 @@
-package com.example.learncompose.ui.theme
+package com.example.learncompose.theme
 
 
 import androidx.compose.foundation.isSystemInDarkTheme

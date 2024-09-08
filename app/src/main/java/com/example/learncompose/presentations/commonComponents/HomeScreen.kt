@@ -1,4 +1,4 @@
-package com.example.learncompose.screens.screen
+package com.example.learncompose.presentations.commonComponents
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -34,16 +34,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.input.nestedscroll.nestedScroll
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.learncompose.screens.commonComponents.HomeTopAppBar
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(navController: NavHostController){
+fun HomeScreenCommon(navController: NavHostController){
 
     val scrollBehavior= TopAppBarDefaults.enterAlwaysScrollBehavior(state = rememberTopAppBarState())
 

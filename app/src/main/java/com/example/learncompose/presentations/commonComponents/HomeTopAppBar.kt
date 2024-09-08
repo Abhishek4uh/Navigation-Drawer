@@ -1,4 +1,4 @@
-package com.example.learncompose.screens.commonComponents
+package com.example.learncompose.presentations.commonComponents
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
