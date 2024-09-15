@@ -7,8 +7,8 @@ androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.8.5"
 activity-compose = "1.9.2"
-compose-bom = "2024.09.00"
-materialIconsExtended="1.7.0"
+compose-bom = "2024.09.01"
+materialIconsExtended="1.7.1"
 composeCharts="0.2.1"
 hilt-version = "2.49"
 kotlin-kapt-version = "1.6.20"
@@ -17,7 +17,7 @@ retrofit = "2.9.0"
 lifecycle-compose = "2.8.5"
 okhttp_log_interceptor="4.9.2"
 preferences="1.1.1"
-
+kotlinxSerializationJson = "1.5.0"
 
 
 [libraries]
@@ -38,6 +38,7 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 okhttp-interceptor={ group="com.squareup.okhttp3", name="okhttp", version.ref="okhttp_log_interceptor"}
 okhttp-log-interceptor={group="com.squareup.okhttp3",name="logging-interceptor", version.ref="okhttp_log_interceptor"}
 dataStore={group="androidx.datastore", name="datastore",version.ref="preferences"}
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 
 
 #Hilt
@@ -67,6 +68,8 @@ org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.re
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt-version" }
 #Kapt
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin-kapt-version" }
+
+kotlinx-serialization={id="org.jetbrains.kotlin.plugin.serialization",version="1.9.0"}
 
 [bundles]
 retrofit = ["retrofit", "gson-convertor"]

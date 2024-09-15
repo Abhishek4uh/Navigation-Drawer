@@ -8,4 +8,6 @@ val ISLOGGEDIN= booleanPreferencesKey("is_loggedIn")
 interface UserPrefrences {
     fun userLoggedIn():Flow<Boolean>
     suspend fun saveLoggedIn(isLogin:Boolean)
+
+    suspend fun isLoggedInSync():Boolean
 }

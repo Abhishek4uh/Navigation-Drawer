@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.org.jetbrains.kotlin.android)
     alias(libs.plugins.hilt.plugin)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlinx.serialization)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -91,7 +93,7 @@ dependencies {
 
     //Navigation , Splash API, Theme
     implementation ("com.google.accompanist:accompanist-systemuicontroller:0.28.0")
-    implementation("androidx.navigation:navigation-compose:2.7.0")
+    implementation("androidx.navigation:navigation-compose:2.8.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
 
 
@@ -106,4 +108,8 @@ dependencies {
     //Chucker
     implementation( "com.github.chuckerteam.chucker:library:3.5.2")
     releaseImplementation("com.github.chuckerteam.chucker:library-no-op:3.5.2")
+    //implementation ("androidx.compose.material3:material3:1.3.0")
+
+    implementation(libs.kotlinx.serialization.json)
+
 }

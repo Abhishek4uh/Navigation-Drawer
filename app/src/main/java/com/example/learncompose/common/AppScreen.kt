@@ -1,16 +1,27 @@
 package com.example.learncompose.common
 
-sealed class AppScreen(val route:String){
-    data object Login: AppScreen("login")
-    data object SignUp: AppScreen("signup")
-    data object ForgotPassword: AppScreen("forgot_password")
-    data object OtpScreen: AppScreen("otp_screen")
-    data object Home: AppScreen("home")
-    data object Detail: AppScreen("details")
+import kotlinx.serialization.Serializable
 
+sealed class AppScreen{
+    @Serializable
+    data object Login: AppScreen()
+    @Serializable
+    data object SignUp: AppScreen()
+    @Serializable
+    data object ForgotPassword: AppScreen()
+    @Serializable
+    data object OtpScreen: AppScreen()
+
+    //Main Screen
+    @Serializable
+    data object Home: AppScreen()
+    @Serializable
+    data class Detail(val name:String, val email:String): AppScreen()
 }
 
-sealed class NavGraphRoute(val route: String){
-    data object Authentication: NavGraphRoute("auth")
-    data object Main: NavGraphRoute("main")
+sealed class NavGraphRoute{
+    @Serializable
+    data object Authentication: NavGraphRoute()
+    @Serializable
+    data object Main: NavGraphRoute()
 }

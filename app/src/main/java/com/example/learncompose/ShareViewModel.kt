@@ -19,16 +19,21 @@ class AuthViewModel @Inject constructor(private val userPrefrences: UserPrefrenc
 
     init {
         viewModelScope.launch {
-            delay(1000)
+            delay(2000)
             isSplash= false
         }
+    }
+
+    // Synchronous login state fetcher
+    suspend fun isLoggedInSync(): Boolean {
+        return userPrefrences.isLoggedInSync()
     }
 
 
 
     fun saveIsLogin(isLogin:Boolean){
         viewModelScope.launch{
-            userPrefrences.saveLoggedIn(true)
+            userPrefrences.saveLoggedIn(isLogin)
         }
     }
 }
